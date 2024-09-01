@@ -65,7 +65,7 @@ public class MovesetNameRegisteryProcedure {
 		if (((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk).equals("zero gravity")) {
 			if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_attack_selection_rotor == 1) {
 				{
-					String _setval = "Entity Float";
+					String _setval = "Float Field";
 					entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.quirk_attack_selected = _setval;
 						capability.syncPlayerVariables(entity);
@@ -73,7 +73,7 @@ public class MovesetNameRegisteryProcedure {
 				}
 			} else if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_attack_selection_rotor == 2) {
 				{
-					String _setval = "Skill Releace";
+					String _setval = "Skill Release";
 					entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.quirk_attack_selected = _setval;
 						capability.syncPlayerVariables(entity);

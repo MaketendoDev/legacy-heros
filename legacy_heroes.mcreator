@@ -760,64 +760,6 @@
       "path": "~/Quirks"
     },
     {
-      "name": "PhantomFlash",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "phantom_flash",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/legacyheroes/procedures/PhantomFlashProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Quirks/Powers/Invisibility/Attacks"
-    },
-    {
-      "name": "LightRefraction",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "light_refraction",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/legacyheroes/procedures/LightRefractionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Quirks/Powers/Invisibility/Attacks"
-    },
-    {
       "name": "QuirkTickingProcedure",
       "type": "procedure",
       "compiles": true,
@@ -967,6 +909,64 @@
         ]
       },
       "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "Levitation",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "levitation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/LevitationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Quirks/Powers/Zero Gravity/Attacks"
+    },
+    {
+      "name": "PhantomTouch",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantom_touch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/PhantomTouchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Quirks/Powers/Invisibility/Attacks"
     }
   ],
   "variable_elements": [

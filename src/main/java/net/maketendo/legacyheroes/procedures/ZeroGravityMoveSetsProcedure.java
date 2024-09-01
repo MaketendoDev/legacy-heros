@@ -10,9 +10,11 @@ public class ZeroGravityMoveSetsProcedure {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_attack_selection_rotor == 1) {
-			PhantomFlashProcedure.execute(world, x, y, z, entity);
+			DisplaySelectedAttackSlot5Procedure.execute(entity);
 		} else if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_attack_selection_rotor == 2) {
-			LightRefractionProcedure.execute(world, entity);
+			QuirkCooldown0Procedure.execute(entity);
+		} else if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_attack_selection_rotor == 3) {
+			LevitationProcedure.execute(world, x, y, z, entity);
 		}
 	}
 }

@@ -10,9 +10,9 @@ public class InvisibilityMoveSetsProcedure {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_attack_selection_rotor == 1) {
-			PhantomFlashProcedure.execute(world, x, y, z, entity);
+			WarpRefractionProcedure.execute(world, x, y, z, entity);
 		} else if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_attack_selection_rotor == 2) {
-			LightRefractionProcedure.execute(world, entity);
+			PhantomTouchProcedure.execute(world, entity);
 		}
 	}
 }

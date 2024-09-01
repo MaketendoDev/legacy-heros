@@ -14,7 +14,7 @@ import net.maketendo.legacyheroes.network.LegacyHeroesModVariables;
 import java.util.List;
 import java.util.Comparator;
 
-public class LightRefractionProcedure {
+public class PhantomTouchProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
