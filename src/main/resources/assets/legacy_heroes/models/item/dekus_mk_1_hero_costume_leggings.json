@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "legacy_heroes:item/dekus_first_leggings"
+  }
+}

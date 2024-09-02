@@ -1,0 +1,8 @@
+{
+  "parent": "legacy_heroes:custom/dekus_first_mask",
+  "textures": {
+    "0": "legacy_heroes:block/dekus_first_mask",
+    "missing": "legacy_heroes:block/dekus_first_mask",
+    "particle": "legacy_heroes:item/dekus_first_mask"
+  }
+}

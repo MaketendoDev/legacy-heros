@@ -19,5 +19,9 @@ public class LegacyHeroesModTabs {
 	public static final RegistryObject<CreativeModeTab> LEGACY_HEROES = REGISTRY.register("legacy_heroes",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.legacy_heroes.legacy_heroes")).icon(() -> new ItemStack(LegacyHeroesModItems.HEROCOSTUMESUITCASE.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(LegacyHeroesModItems.HEROCOSTUMESUITCASE.get());
+				tabData.accept(LegacyHeroesModItems.DEKUS_MK_1_HERO_COSTUME_HELMET.get());
+				tabData.accept(LegacyHeroesModItems.DEKUS_MK_1_HERO_COSTUME_CHESTPLATE.get());
+				tabData.accept(LegacyHeroesModItems.DEKUS_MK_1_HERO_COSTUME_LEGGINGS.get());
+				tabData.accept(LegacyHeroesModItems.DEKUS_MK_1_HERO_COSTUME_BOOTS.get());
 			}).withSearchBar().build());
 }
