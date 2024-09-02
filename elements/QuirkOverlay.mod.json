@@ -386,7 +386,7 @@
       {
         "type": "image",
         "data": {
-          "image": "levitate_attack_icon.png",
+          "image": "field_float_attack_icon.png",
           "use1Xscale": false,
           "displayCondition": {
             "name": "ZeroGravityOverlayDisplay"
@@ -407,6 +407,19 @@
           "anchorPoint": "TOP_LEFT",
           "x": 8,
           "y": 13
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "levitate_attack_icon.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ZeroGravityOverlayDisplay"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 86,
+          "y": 12
         }
       }
     ],
