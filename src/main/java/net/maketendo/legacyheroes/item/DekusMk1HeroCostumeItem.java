@@ -19,8 +19,8 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.Minecraft;
 
-import net.maketendo.legacyheroes.client.model.Modeltest;
-import net.maketendo.legacyheroes.client.model.Modeldekus_first_mask_java;
+import net.maketendo.legacyheroes.client.model.Modeldekus_mk1_suit;
+import net.maketendo.legacyheroes.client.model.Modeldekus_mk1_mask;
 
 import java.util.function.Consumer;
 import java.util.Map;
@@ -82,8 +82,8 @@ public abstract class DekusMk1HeroCostumeItem extends ArmorItem {
 				@Override
 				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(),
-							Map.of("head", new Modeldekus_first_mask_java(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldekus_first_mask_java.LAYER_LOCATION)).bone, "hat", new ModelPart(Collections.emptyList(), Collections.emptyMap()),
-									"body", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_arm",
+							Map.of("head", new Modeldekus_mk1_mask(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldekus_mk1_mask.LAYER_LOCATION)).bone, "hat", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body",
+									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_arm",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_leg",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
 					armorModel.crouching = living.isShiftKeyDown();
@@ -111,10 +111,10 @@ public abstract class DekusMk1HeroCostumeItem extends ArmorItem {
 				@Override
 				@OnlyIn(Dist.CLIENT)
 				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
-					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body", new Modeltest(Minecraft.getInstance().getEntityModels().bakeLayer(Modeltest.LAYER_LOCATION)).body, "left_arm",
-							new Modeltest(Minecraft.getInstance().getEntityModels().bakeLayer(Modeltest.LAYER_LOCATION)).left_arm, "right_arm", new Modeltest(Minecraft.getInstance().getEntityModels().bakeLayer(Modeltest.LAYER_LOCATION)).right_arm,
-							"head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()),
-							"left_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
+					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body", new Modeldekus_mk1_suit(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldekus_mk1_suit.LAYER_LOCATION)).body, "left_arm",
+							new Modeldekus_mk1_suit(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldekus_mk1_suit.LAYER_LOCATION)).left_arm, "right_arm",
+							new Modeldekus_mk1_suit(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldekus_mk1_suit.LAYER_LOCATION)).right_arm, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
+							new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
 					armorModel.crouching = living.isShiftKeyDown();
 					armorModel.riding = defaultModel.riding;
 					armorModel.young = living.isBaby();
@@ -141,8 +141,8 @@ public abstract class DekusMk1HeroCostumeItem extends ArmorItem {
 				@OnlyIn(Dist.CLIENT)
 				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(),
-							Map.of("left_leg", new Modeltest(Minecraft.getInstance().getEntityModels().bakeLayer(Modeltest.LAYER_LOCATION)).left_shoe, "right_leg",
-									new Modeltest(Minecraft.getInstance().getEntityModels().bakeLayer(Modeltest.LAYER_LOCATION)).right_shoe, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
+							Map.of("left_leg", new Modeldekus_mk1_suit(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldekus_mk1_suit.LAYER_LOCATION)).left_shoe, "right_leg",
+									new Modeldekus_mk1_suit(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldekus_mk1_suit.LAYER_LOCATION)).right_shoe, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()),
 									"left_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
 					armorModel.crouching = living.isShiftKeyDown();
@@ -171,8 +171,8 @@ public abstract class DekusMk1HeroCostumeItem extends ArmorItem {
 				@OnlyIn(Dist.CLIENT)
 				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(),
-							Map.of("left_leg", new Modeltest(Minecraft.getInstance().getEntityModels().bakeLayer(Modeltest.LAYER_LOCATION)).left_shoe, "right_leg",
-									new Modeltest(Minecraft.getInstance().getEntityModels().bakeLayer(Modeltest.LAYER_LOCATION)).right_shoe, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
+							Map.of("left_leg", new Modeldekus_mk1_suit(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldekus_mk1_suit.LAYER_LOCATION)).left_shoe, "right_leg",
+									new Modeldekus_mk1_suit(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldekus_mk1_suit.LAYER_LOCATION)).right_shoe, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()),
 									"left_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
 					armorModel.crouching = living.isShiftKeyDown();

@@ -9,14 +9,14 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.maketendo.legacyheroes.client.model.Modeltest;
-import net.maketendo.legacyheroes.client.model.Modeldekus_first_mask_java;
+import net.maketendo.legacyheroes.client.model.Modeldekus_mk1_suit;
+import net.maketendo.legacyheroes.client.model.Modeldekus_mk1_mask;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class LegacyHeroesModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
-		event.registerLayerDefinition(Modeldekus_first_mask_java.LAYER_LOCATION, Modeldekus_first_mask_java::createBodyLayer);
-		event.registerLayerDefinition(Modeltest.LAYER_LOCATION, Modeltest::createBodyLayer);
+		event.registerLayerDefinition(Modeldekus_mk1_suit.LAYER_LOCATION, Modeldekus_mk1_suit::createBodyLayer);
+		event.registerLayerDefinition(Modeldekus_mk1_mask.LAYER_LOCATION, Modeldekus_mk1_mask::createBodyLayer);
 	}
 }

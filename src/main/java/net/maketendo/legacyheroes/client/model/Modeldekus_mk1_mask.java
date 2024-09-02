@@ -18,13 +18,13 @@ import com.mojang.blaze3d.vertex.PoseStack;
 // Made with Blockbench 4.10.4
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
-public class Modeldekus_first_mask_java<T extends Entity> extends EntityModel<T> {
+public class Modeldekus_mk1_mask<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("legacy_heroes", "modeldekus_first_mask_java"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("legacy_heroes", "modeldekus_mk_1_mask"), "main");
 	public final ModelPart bone;
 
-	public Modeldekus_first_mask_java(ModelPart root) {
+	public Modeldekus_mk1_mask(ModelPart root) {
 		this.bone = root.getChild("bone");
 	}
 
@@ -32,13 +32,13 @@ public class Modeldekus_first_mask_java<T extends Entity> extends EntityModel<T>
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 		PartDefinition bone = partdefinition.addOrReplaceChild("bone",
-				CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.0F)).texOffs(0, 23).addBox(-4.5F, -1.9F, -4.4F, 9.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(14, 9)
-						.addBox(-4.1F, -7.15F, -2.8F, 0.0F, 7.0F, 7.0F, new CubeDeformation(0.0F)).texOffs(0, 9).addBox(4.1F, -7.15F, -2.8F, 0.0F, 7.0F, 7.0F, new CubeDeformation(0.0F)).texOffs(21, 22)
-						.addBox(-4.1F, -7.15F, 4.1995F, 8.2F, 7.0F, 0.0F, new CubeDeformation(0.0F)),
+				CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.25F)).texOffs(0, 23).addBox(-4.5F, -1.9F, -4.4F, 9.0F, 2.0F, 2.0F, new CubeDeformation(0.25F)).texOffs(14, 9)
+						.addBox(-4.1F, -7.15F, -2.8F, 0.0F, 7.0F, 7.0F, new CubeDeformation(0.25F)).texOffs(0, 9).addBox(4.1F, -7.15F, -2.8F, 0.0F, 7.0F, 7.0F, new CubeDeformation(0.25F)).texOffs(21, 22)
+						.addBox(-4.1F, -7.15F, 4.1995F, 8.2F, 7.0F, 0.0F, new CubeDeformation(0.25F)),
 				PartPose.offset(0.0F, 24.0F, 0.0F));
-		PartDefinition cube_r1 = bone.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(0, 0).addBox(-2.0F, -2.0F, 4.0F, 4.0F, 8.0F, 0.0F, new CubeDeformation(0.0F)),
+		PartDefinition cube_r1 = bone.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(0, 0).addBox(-2.0F, -2.0F, 4.0F, 4.0F, 8.0F, 0.0F, new CubeDeformation(0.25F)),
 				PartPose.offsetAndRotation(4.483F, -12.4609F, -4.0F, 0.0F, 0.0F, 0.3927F));
-		PartDefinition cube_r2 = bone.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(0, 0).mirror().addBox(-3.0F, -2.0F, 4.0F, 4.0F, 8.0F, 0.0F, new CubeDeformation(0.0F)).mirror(false),
+		PartDefinition cube_r2 = bone.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(0, 0).mirror().addBox(-3.0F, -2.0F, 4.0F, 4.0F, 8.0F, 0.0F, new CubeDeformation(0.25F)).mirror(false),
 				PartPose.offsetAndRotation(-3.483F, -12.4609F, -4.0F, 0.0F, 0.0F, -0.3927F));
 		return LayerDefinition.create(meshdefinition, 64, 64);
 	}
