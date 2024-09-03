@@ -16,8 +16,6 @@ public class LevitationProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.END_ROD, x, y, z, 20, 1, 3, 1, 1);
 		if ((entity instanceof Player _plr ? _plr.experienceLevel : 0) >= 0 && (entity instanceof Player _plr ? _plr.experienceLevel : 0) <= 5) {
 			if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_cooldown >= 20) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -33,6 +31,8 @@ public class LevitationProcedure {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 260, 2, false, false));
 				});
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.END_ROD, x, y, z, 20, 0, 2, 0, 0);
 			}
 		} else if ((entity instanceof Player _plr ? _plr.experienceLevel : 0) > 5 && (entity instanceof Player _plr ? _plr.experienceLevel : 0) <= 10) {
 			if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_cooldown >= 20) {
@@ -49,6 +49,8 @@ public class LevitationProcedure {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 120, 2, false, false));
 				});
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.END_ROD, x, y, z, 20, 0, 2, 0, 0);
 			}
 		} else if ((entity instanceof Player _plr ? _plr.experienceLevel : 0) > 10 && (entity instanceof Player _plr ? _plr.experienceLevel : 0) <= 15) {
 			if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_cooldown >= 20) {
@@ -65,6 +67,8 @@ public class LevitationProcedure {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 120, 2, false, false));
 				});
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.END_ROD, x, y, z, 20, 0, 2, 0, 0);
 			}
 		} else if ((entity instanceof Player _plr ? _plr.experienceLevel : 0) > 15 && (entity instanceof Player _plr ? _plr.experienceLevel : 0) <= 20) {
 			if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_cooldown >= 15) {
@@ -81,6 +85,8 @@ public class LevitationProcedure {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 120, 2, false, false));
 				});
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.END_ROD, x, y, z, 20, 0, 2, 0, 0);
 			}
 		} else if ((entity instanceof Player _plr ? _plr.experienceLevel : 0) > 25 && (entity instanceof Player _plr ? _plr.experienceLevel : 0) <= 30) {
 			if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_cooldown >= 15) {
@@ -97,6 +103,8 @@ public class LevitationProcedure {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 80, 1, false, false));
 				});
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.END_ROD, x, y, z, 20, 0, 2, 0, 0);
 			}
 		} else if ((entity instanceof Player _plr ? _plr.experienceLevel : 0) > 30 && (entity instanceof Player _plr ? _plr.experienceLevel : 0) <= 35) {
 			if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_cooldown >= 10) {
@@ -113,6 +121,8 @@ public class LevitationProcedure {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 1, false, false));
 				});
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.END_ROD, x, y, z, 20, 0, 2, 0, 0);
 			}
 		} else {
 			if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_cooldown >= 5) {
@@ -129,6 +139,8 @@ public class LevitationProcedure {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 1, false, false));
 				});
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.END_ROD, x, y, z, 20, 0, 2, 0, 0);
 			}
 		}
 	}

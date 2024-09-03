@@ -421,6 +421,45 @@
           "x": 86,
           "y": 12
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hardening_quirk_icon.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "HardeningOverlayDisplay"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 8,
+          "y": 13
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "red_riot_quirk_icon.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "HardeningOverlayDisplay"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 60,
+          "y": 11
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "harden_body_attack_icon.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "HardeningOverlayDisplay"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 36,
+          "y": 12
+        }
       }
     ],
     "baseTexture": "",

@@ -13,6 +13,8 @@ public class UseQuirkPowerOnKeyPressedProcedure {
 			InvisibilityMoveSetsProcedure.execute(world, x, y, z, entity);
 		} else if (((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk).equals("zero gravity")) {
 			ZeroGravityMoveSetsProcedure.execute(world, x, y, z, entity);
+		} else if (((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk).equals("hardening")) {
+			HardeningMoveSetsProcedure.execute(world, entity);
 		}
 	}
 }

@@ -18,6 +18,8 @@ import net.minecraft.commands.Commands;
 import net.maketendo.legacyheroes.procedures.RemoveQuirkProcedure;
 import net.maketendo.legacyheroes.procedures.AddZeroGravityQuirkProcedure;
 import net.maketendo.legacyheroes.procedures.AddInvisibilityQuirkProcedure;
+import net.maketendo.legacyheroes.procedures.AddHealingQuirkProcedure;
+import net.maketendo.legacyheroes.procedures.AddHardeningQuirkProcedure;
 
 @Mod.EventBusSubscriber
 public class QuirksCommand {
@@ -38,7 +40,21 @@ public class QuirksCommand {
 
 					AddInvisibilityQuirkProcedure.execute(arguments, entity);
 					return 0;
-				})).then(Commands.literal("hardening")).then(Commands.literal("zerogravity").executes(arguments -> {
+				})).then(Commands.literal("hardening").executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					AddHardeningQuirkProcedure.execute(arguments, entity);
+					return 0;
+				})).then(Commands.literal("zerogravity").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -52,7 +68,21 @@ public class QuirksCommand {
 
 					AddZeroGravityQuirkProcedure.execute(arguments, entity);
 					return 0;
-				})).then(Commands.literal("hardening")).then(Commands.literal("hardening")).then(Commands.literal("hardening")))).then(Commands.literal("remove").then(Commands.argument("player", EntityArgument.player()).executes(arguments -> {
+				})).then(Commands.literal("healing").executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					AddHealingQuirkProcedure.execute(arguments, entity);
+					return 0;
+				})).then(Commands.literal("explosion")).then(Commands.literal("oneforall")))).then(Commands.literal("remove").then(Commands.argument("player", EntityArgument.player()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();

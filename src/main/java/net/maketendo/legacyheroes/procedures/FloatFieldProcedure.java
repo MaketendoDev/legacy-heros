@@ -1,6 +1,7 @@
 package net.maketendo.legacyheroes.procedures;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
@@ -8,6 +9,10 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
 import net.maketendo.legacyheroes.network.LegacyHeroesModVariables;
 import net.maketendo.legacyheroes.LegacyHeroesMod;
@@ -40,6 +45,9 @@ public class FloatFieldProcedure {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 260, 2, false, false));
 						});
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"summon area_effect_cloud ^ ^0.2 ^1 {Particle:mobSpell,Radius:4f,Duration:20}");
 					}
 				}
 			}
@@ -64,6 +72,9 @@ public class FloatFieldProcedure {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 120, 2, false, false));
 						});
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"summon area_effect_cloud ^ ^0.2 ^1 {Particle:mobSpell,Radius:4f,Duration:20}");
 					}
 				}
 			}
@@ -88,6 +99,9 @@ public class FloatFieldProcedure {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 120, 2, false, false));
 						});
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"summon area_effect_cloud ^ ^0.2 ^1 {Particle:mobSpell,Radius:5f,Duration:20}");
 					}
 				}
 			}
@@ -112,6 +126,9 @@ public class FloatFieldProcedure {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 120, 2, false, false));
 						});
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"summon area_effect_cloud ^ ^0.2 ^1 {Particle:mobSpell,Radius:6f,Duration:20}");
 					}
 				}
 			}
@@ -136,6 +153,9 @@ public class FloatFieldProcedure {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 80, 1, false, false));
 						});
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"summon area_effect_cloud ^ ^0.2 ^1 {Particle:mobSpell,Radius:6f,Duration:20}");
 					}
 				}
 			}
@@ -160,6 +180,9 @@ public class FloatFieldProcedure {
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 1, false, false));
 						});
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"summon area_effect_cloud ^ ^0.2 ^1 {Particle:mobSpell,Radius:7f,Duration:20}");
 					}
 				}
 			}
@@ -184,6 +207,9 @@ public class FloatFieldProcedure {
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 1, false, false));
 						});
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"summon area_effect_cloud ^ ^0.2 ^1 {Particle:mobSpell,Radius:7f,Duration:20}");
 					}
 				}
 			}

@@ -124,7 +124,7 @@ public class LegacyHeroesModVariables {
 	}
 
 	public static class PlayerVariables {
-		public String quirk = "\"quirkless\"";
+		public String quirk = "quirkless";
 		public double quirk_power_percentage = 0;
 		public double quirk_cooldown = 0;
 		public double quirk_attack_selection_rotor = 1.0;

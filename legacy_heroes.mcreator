@@ -1054,6 +1054,141 @@
         ]
       },
       "path": "~/Quirks/Powers/Zero Gravity/Attacks"
+    },
+    {
+      "name": "HardeningOverlayDisplay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hardening_overlay_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/HardeningOverlayDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Quirks/Powers/Hardening/Overlay"
+    },
+    {
+      "name": "HardeningMoveSets",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hardening_move_sets",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/HardeningMoveSetsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Quirks/Powers/Hardening/Movesets"
+    },
+    {
+      "name": "AddHardeningQuirk",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_hardening_quirk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/AddHardeningQuirkProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "AddHealingQuirk",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_healing_quirk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/AddHealingQuirkProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "HardenBody",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "harden_body",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/HardenBodyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Quirks/Powers/Hardening/Attacks"
+    },
+    {
+      "name": "RedRiotUnbreakable",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_riot_unbreakable",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/RedRiotUnbreakableProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Quirks/Powers/Hardening/Attacks"
     }
   ],
   "variable_elements": [
@@ -1061,7 +1196,7 @@
       "name": "quirk",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"quirkless\""
+      "value": "quirkless"
     },
     {
       "name": "quirk_power_percentage",
@@ -1208,6 +1343,10 @@
               },
               {
                 "name": "Explosion",
+                "children": []
+              },
+              {
+                "name": "Healing",
                 "children": []
               }
             ]
