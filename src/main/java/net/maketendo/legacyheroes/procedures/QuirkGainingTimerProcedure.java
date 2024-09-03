@@ -12,7 +12,7 @@ import net.maketendo.legacyheroes.network.LegacyHeroesModVariables;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class QuirkCooldownLocalTimerProcedure {
+public class QuirkGainingTimerProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		if (event.phase == TickEvent.Phase.END) {
@@ -27,11 +27,11 @@ public class QuirkCooldownLocalTimerProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_cooldown_timer == 0) {
+		if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_gaining_timer == 0) {
 			{
 				double _setval = 600;
 				entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.quirk_cooldown_timer = _setval;
+					capability.quirk_gaining_timer = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
@@ -39,7 +39,7 @@ public class QuirkCooldownLocalTimerProcedure {
 			{
 				double _setval = (entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_cooldown_timer - 1;
 				entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.quirk_cooldown_timer = _setval;
+					capability.quirk_gaining_timer = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

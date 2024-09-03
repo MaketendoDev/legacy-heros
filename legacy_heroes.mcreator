@@ -1189,6 +1189,153 @@
         ]
       },
       "path": "~/Quirks/Powers/Hardening/Attacks"
+    },
+    {
+      "name": "HealingOverlayDisplay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_overlay_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/HealingOverlayDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Quirks/Powers/Healing/Overlay"
+    },
+    {
+      "name": "HealingMoveSets",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_move_sets",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/HealingMoveSetsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Quirks/Powers/Healing/Movesets"
+    },
+    {
+      "name": "HealingKiss",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_kiss",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/HealingKissProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Quirks/Powers/Healing/Attacks"
+    },
+    {
+      "name": "SelfHeal",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "self_heal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/SelfHealProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Quirks/Powers/Healing/Attacks"
+    },
+    {
+      "name": "QuirkGainingTimer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quirk_gaining_timer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/QuirkGainingTimerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Quirks/Natural Quirk Generation"
+    },
+    {
+      "name": "PlayerNaturalQuirkGaining",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_natural_quirk_gaining",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/PlayerNaturalQuirkGainingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Quirks/Natural Quirk Generation"
     }
   ],
   "variable_elements": [
@@ -1196,7 +1343,7 @@
       "name": "quirk",
       "type": "string",
       "scope": "player_persistent",
-      "value": "quirkless"
+      "value": "none"
     },
     {
       "name": "quirk_power_percentage",
@@ -1230,6 +1377,12 @@
     },
     {
       "name": "quirk_cooldown_timer",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "quirk_gaining_timer",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
@@ -1347,9 +1500,26 @@
               },
               {
                 "name": "Healing",
-                "children": []
+                "children": [
+                  {
+                    "name": "Overlay",
+                    "children": []
+                  },
+                  {
+                    "name": "Movesets",
+                    "children": []
+                  },
+                  {
+                    "name": "Attacks",
+                    "children": []
+                  }
+                ]
               }
             ]
+          },
+          {
+            "name": "Natural Quirk Generation",
+            "children": []
           }
         ]
       },

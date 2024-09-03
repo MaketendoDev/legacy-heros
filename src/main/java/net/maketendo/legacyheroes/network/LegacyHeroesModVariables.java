@@ -83,6 +83,7 @@ public class LegacyHeroesModVariables {
 			clone.quirk_attack_selected = original.quirk_attack_selected;
 			clone.Player_ID = original.Player_ID;
 			clone.quirk_cooldown_timer = original.quirk_cooldown_timer;
+			clone.quirk_gaining_timer = original.quirk_gaining_timer;
 			if (!event.isWasDeath()) {
 			}
 			if (!event.getEntity().level().isClientSide()) {
@@ -124,13 +125,14 @@ public class LegacyHeroesModVariables {
 	}
 
 	public static class PlayerVariables {
-		public String quirk = "quirkless";
+		public String quirk = "none";
 		public double quirk_power_percentage = 0;
 		public double quirk_cooldown = 0;
 		public double quirk_attack_selection_rotor = 1.0;
 		public String quirk_attack_selected = "";
 		public double Player_ID = 0;
 		public double quirk_cooldown_timer = 0;
+		public double quirk_gaining_timer = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -146,6 +148,7 @@ public class LegacyHeroesModVariables {
 			nbt.putString("quirk_attack_selected", quirk_attack_selected);
 			nbt.putDouble("Player_ID", Player_ID);
 			nbt.putDouble("quirk_cooldown_timer", quirk_cooldown_timer);
+			nbt.putDouble("quirk_gaining_timer", quirk_gaining_timer);
 			return nbt;
 		}
 
@@ -158,6 +161,7 @@ public class LegacyHeroesModVariables {
 			quirk_attack_selected = nbt.getString("quirk_attack_selected");
 			Player_ID = nbt.getDouble("Player_ID");
 			quirk_cooldown_timer = nbt.getDouble("quirk_cooldown_timer");
+			quirk_gaining_timer = nbt.getDouble("quirk_gaining_timer");
 		}
 	}
 
@@ -198,6 +202,7 @@ public class LegacyHeroesModVariables {
 					variables.quirk_attack_selected = message.data.quirk_attack_selected;
 					variables.Player_ID = message.data.Player_ID;
 					variables.quirk_cooldown_timer = message.data.quirk_cooldown_timer;
+					variables.quirk_gaining_timer = message.data.quirk_gaining_timer;
 				}
 			});
 			context.setPacketHandled(true);

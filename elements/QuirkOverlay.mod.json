@@ -460,6 +460,45 @@
           "x": 36,
           "y": 12
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "healing_quirk_icon.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "HealingOverlayDisplay"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 8,
+          "y": 13
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "kiss_attack_icon.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "HealingOverlayDisplay"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 36,
+          "y": 12
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "self_healing_attack_icon.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "HealingOverlayDisplay"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 61,
+          "y": 12
+        }
       }
     ],
     "baseTexture": "",

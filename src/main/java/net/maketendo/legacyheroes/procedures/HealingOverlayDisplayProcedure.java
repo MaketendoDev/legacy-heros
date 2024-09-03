@@ -12,7 +12,7 @@ import net.maketendo.legacyheroes.network.LegacyHeroesModVariables;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class DisplayQuirkGuiProcedure {
+public class HealingOverlayDisplayProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		if (event.phase == TickEvent.Phase.END) {
@@ -28,8 +28,7 @@ public class DisplayQuirkGuiProcedure {
 		if (entity == null)
 			return false;
 		double fireHeight = 0;
-		if (!(((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk).equals("quirkless")
-				|| ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk).equals("none"))) {
+		if (((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk).equals("healing")) {
 			return true;
 		}
 		return false;

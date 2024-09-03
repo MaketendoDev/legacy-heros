@@ -29,6 +29,7 @@ import net.maketendo.legacyheroes.procedures.QuirkCooldown1Procedure;
 import net.maketendo.legacyheroes.procedures.QuirkCooldown10Procedure;
 import net.maketendo.legacyheroes.procedures.QuirkCooldown0Procedure;
 import net.maketendo.legacyheroes.procedures.InvisibilityOverlayDisplayProcedure;
+import net.maketendo.legacyheroes.procedures.HealingOverlayDisplayProcedure;
 import net.maketendo.legacyheroes.procedures.HardeningOverlayDisplayProcedure;
 import net.maketendo.legacyheroes.procedures.DisplaySelectedAttackSlot4Procedure;
 import net.maketendo.legacyheroes.procedures.DisplaySelectedAttackSlot3Procedure;
@@ -155,6 +156,15 @@ public class QuirkOverlayOverlay {
 			}
 			if (HardeningOverlayDisplayProcedure.execute(entity)) {
 				event.getGuiGraphics().blit(new ResourceLocation("legacy_heroes:textures/screens/harden_body_attack_icon.png"), 36, 12, 0, 0, 16, 16, 16, 16);
+			}
+			if (HealingOverlayDisplayProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(new ResourceLocation("legacy_heroes:textures/screens/healing_quirk_icon.png"), 8, 13, 0, 0, 18, 18, 18, 18);
+			}
+			if (HealingOverlayDisplayProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(new ResourceLocation("legacy_heroes:textures/screens/kiss_attack_icon.png"), 36, 12, 0, 0, 16, 16, 16, 16);
+			}
+			if (HealingOverlayDisplayProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(new ResourceLocation("legacy_heroes:textures/screens/self_healing_attack_icon.png"), 61, 12, 0, 0, 16, 16, 16, 16);
 			}
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.legacy_heroes.quirk_overlay.label_100"), 186, 2, -13369600, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.legacy_heroes.quirk_overlay.label_empty"), 204, 2, -13369600, false);
