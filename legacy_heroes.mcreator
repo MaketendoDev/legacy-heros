@@ -1091,6 +1091,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -1336,6 +1348,37 @@
         ]
       },
       "path": "~/Quirks/Natural Quirk Generation"
+    },
+    {
+      "name": "BoomBoomProtocal",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boom_boom_protocal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/BoomBoomProtocalProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Quirks/Powers/Hardening"
     }
   ],
   "variable_elements": [
