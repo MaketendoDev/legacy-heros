@@ -1622,7 +1622,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "kleidersplayerrenderer"
+      "playeranimator"
     ],
     "currentGenerator": "forge-1.20.1",
     "credits": "test",

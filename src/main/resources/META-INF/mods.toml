@@ -23,7 +23,7 @@ description="WIP"
 
 
 [[dependencies.legacy_heroes]]
-    modId="kleidersplayerrenderer"
+    modId="playeranimator"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

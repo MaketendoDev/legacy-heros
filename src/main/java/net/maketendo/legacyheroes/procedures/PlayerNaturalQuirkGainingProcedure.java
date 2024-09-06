@@ -49,8 +49,8 @@ public class PlayerNaturalQuirkGainingProcedure {
 				if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_cooldown_timer == 0) {
 					RandomGainQuirk = Mth.nextInt(RandomSource.create(), 0, 5);
 					if (RandomGainQuirk == 0) {
-						RandomGainQuirk = Mth.nextInt(RandomSource.create(), 0, 5);
-						if (RandomGainQuirk == 0) {
+						quirk = Mth.nextInt(RandomSource.create(), 0, 5);
+						if (quirk == 0) {
 							entity.getPersistentData().putString("quirk", "invisibility");
 							{
 								String _setval = "invisibility";
@@ -59,7 +59,7 @@ public class PlayerNaturalQuirkGainingProcedure {
 									capability.syncPlayerVariables(entity);
 								});
 							}
-						} else if (RandomGainQuirk == 1) {
+						} else if (quirk == 1) {
 							entity.getPersistentData().putString("quirk", "hardening");
 							{
 								String _setval = "hardening";
@@ -68,7 +68,7 @@ public class PlayerNaturalQuirkGainingProcedure {
 									capability.syncPlayerVariables(entity);
 								});
 							}
-						} else if (RandomGainQuirk == 2) {
+						} else if (quirk == 2) {
 							entity.getPersistentData().putString("quirk", "zerogravity");
 							{
 								String _setval = "zerogravity";
@@ -77,7 +77,7 @@ public class PlayerNaturalQuirkGainingProcedure {
 									capability.syncPlayerVariables(entity);
 								});
 							}
-						} else if (RandomGainQuirk == 3) {
+						} else if (quirk == 3) {
 							entity.getPersistentData().putString("quirk", "healing");
 							{
 								String _setval = "healing";
@@ -86,7 +86,7 @@ public class PlayerNaturalQuirkGainingProcedure {
 									capability.syncPlayerVariables(entity);
 								});
 							}
-						} else if (RandomGainQuirk == 4) {
+						} else if (quirk == 4) {
 							entity.getPersistentData().putString("quirk", "quirkless");
 							{
 								String _setval = "quirkless";
