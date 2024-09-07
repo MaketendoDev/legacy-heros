@@ -4,12 +4,12 @@ license="MIT License"
 
 [[mods]]
 modId="legacy_heroes"
-version="0.0.1"
+version="0.0.2"
 displayName="Legacy Heroes"
-displayURL="https://mcreator.net"
-credits="test"
+displayURL="https://discord.gg/PG45nNWssF"
+credits="OG20122012 & Westankrang"
 authors="Maketendo"
-description="WIP"
+description="Adds Quirks and Support Items from the series My Hero Academia!"
 
 # Start of user code block mod configuration
 # End of user code block mod configuration

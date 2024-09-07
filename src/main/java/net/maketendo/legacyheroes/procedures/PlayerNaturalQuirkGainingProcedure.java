@@ -5,15 +5,14 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
-import net.minecraft.world.level.GameType;
-import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.client.Minecraft;
 
 import net.maketendo.legacyheroes.network.LegacyHeroesModVariables;
+import net.maketendo.legacyheroes.init.LegacyHeroesModGameRules;
+import net.maketendo.legacyheroes.LegacyHeroesMod;
 
 import javax.annotation.Nullable;
 
@@ -22,32 +21,23 @@ public class PlayerNaturalQuirkGainingProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player);
+			execute(event, event.player.level(), event.player);
 		}
 	}
 
-	public static void execute(Entity entity) {
-		execute(null, entity);
+	public static void execute(LevelAccessor world, Entity entity) {
+		execute(null, world, entity);
 	}
 
-	private static void execute(@Nullable Event event, Entity entity) {
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		double RandomGainQuirk = 0;
 		double quirk = 0;
-		if (new Object() {
-			public boolean checkGamemode(Entity _ent) {
-				if (_ent instanceof ServerPlayer _serverPlayer) {
-					return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-				} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-					return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null && Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-				}
-				return false;
-			}
-		}.checkGamemode(entity)) {
+		if (world.getLevelData().getGameRules().getBoolean(LegacyHeroesModGameRules.ALLOW_PLAYERS_MANIFESTING_QUIRKS) == true) {
 			if (((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk).equals("none")) {
 				if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_cooldown_timer == 0) {
-					RandomGainQuirk = Mth.nextInt(RandomSource.create(), 0, 5);
+					RandomGainQuirk = Mth.nextInt(RandomSource.create(), 0, 3);
 					if (RandomGainQuirk == 0) {
 						quirk = Mth.nextInt(RandomSource.create(), 0, 5);
 						if (quirk == 0) {
@@ -105,6 +95,7 @@ public class PlayerNaturalQuirkGainingProcedure {
 								});
 							}
 						}
+						LegacyHeroesMod.LOGGER.info((entity + " gained the quirk: " + (entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk));
 					}
 				}
 			}

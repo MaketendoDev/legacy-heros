@@ -8,6 +8,8 @@
   "item.legacy_heroes.herocostumesuitcase": "Hero Costume Suitcase",
   "key.legacy_heroes.use_quirk_power": "Use Selected Quirk Attack",
   "key.legacy_heroes.cycle_attacks_right": "Attack Cycle Right",
+  "gamerule.allowPlayersManifestingQuirks": "Allow Players Manifesting Quirks",
+  "gamerule.allowPlayersManifestingQuirks.description": "If disabled, players won\u0027t be able to manifest Quirks naturally",
   "item.legacy_heroes.dekus_mk_1_hero_costume_leggings": "Deku\u0027s Hero Leggings",
   "item_group.legacy_heroes.legacy_heroes": "Legacy Heroes",
   "item.legacy_heroes.dekus_mk_1_hero_costume_boots": "Deku\u0027s Hero Boots",
