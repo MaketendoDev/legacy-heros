@@ -773,6 +773,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1395,6 +1411,84 @@
         "type": "logic"
       },
       "path": "~/Gamerules"
+    },
+    {
+      "name": "AmphibianOverlayDisplay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amphibian_overlay_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/AmphibianOverlayDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Quirks/Powers/Amphibian/Overlay"
+    },
+    {
+      "name": "AmphibianMoveSets",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amphibian_move_sets",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/AmphibianMoveSetsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Quirks/Powers/Amphibian/Movesets"
+    },
+    {
+      "name": "AddAmphibianQuirk",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_amphibian_quirk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/legacyheroes/procedures/AddAmphibianQuirkProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
     }
   ],
   "variable_elements": [
@@ -1453,9 +1547,9 @@
   "language_map": {
     "en_us": {
       "item.legacy_heroes.dekus_mk_1_hero_costume_helmet": "Deku\u0027s Hero Mask",
-      "gui.legacy_heroes.quirk_overlay.label_100": "100",
-      "key.categories.quirks": "Quirks",
       "gui.legacy_heroes.quirk_overlay.label_empty1": "",
+      "key.categories.quirks": "Quirks",
+      "gui.legacy_heroes.quirk_overlay.label_100": "100",
       "gui.legacy_heroes.quirk_overlay.label_11": "11",
       "key.legacy_heroes.cycle_attacks_left": "Attack Cycle Left",
       "item.legacy_heroes.herocostumesuitcase": "Hero Costume Suitcase",
@@ -1561,6 +1655,23 @@
               },
               {
                 "name": "Healing",
+                "children": [
+                  {
+                    "name": "Overlay",
+                    "children": []
+                  },
+                  {
+                    "name": "Movesets",
+                    "children": []
+                  },
+                  {
+                    "name": "Attacks",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Amphibian",
                 "children": [
                   {
                     "name": "Overlay",

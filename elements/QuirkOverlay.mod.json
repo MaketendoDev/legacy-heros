@@ -499,6 +499,45 @@
           "x": 61,
           "y": 12
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "amphibian_quirk_icon.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AmphibianOverlayDisplay"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 9,
+          "y": 14
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tongue_grapple_attack_icon.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AmphibianOverlayDisplay"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 61,
+          "y": 12
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "sunlight_strength_attack_icon.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AmphibianOverlayDisplay"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 86,
+          "y": 12
+        }
       }
     ],
     "baseTexture": "",

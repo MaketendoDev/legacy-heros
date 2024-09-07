@@ -17,6 +17,8 @@ public class UseQuirkPowerOnKeyPressedProcedure {
 			HardeningMoveSetsProcedure.execute(world, x, y, z, entity);
 		} else if (((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk).equals("healing")) {
 			HealingMoveSetsProcedure.execute(world, x, y, z, entity);
+		} else if (((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk).equals("amphibian")) {
+			AmphibianMoveSetsProcedure.execute(world, x, y, z, entity);
 		}
 	}
 }

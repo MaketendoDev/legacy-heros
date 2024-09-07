@@ -37,6 +37,7 @@ import net.maketendo.legacyheroes.procedures.DisplaySelectedAttackSlot2Procedure
 import net.maketendo.legacyheroes.procedures.DisplaySelectedAttackSlot1Procedure;
 import net.maketendo.legacyheroes.procedures.DisplayQuirkGuiProcedure;
 import net.maketendo.legacyheroes.procedures.AttackNameDisplayProcedure;
+import net.maketendo.legacyheroes.procedures.AmphibianOverlayDisplayProcedure;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.platform.GlStateManager;
@@ -165,6 +166,15 @@ public class QuirkOverlayOverlay {
 			}
 			if (HealingOverlayDisplayProcedure.execute(entity)) {
 				event.getGuiGraphics().blit(new ResourceLocation("legacy_heroes:textures/screens/self_healing_attack_icon.png"), 61, 12, 0, 0, 16, 16, 16, 16);
+			}
+			if (AmphibianOverlayDisplayProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(new ResourceLocation("legacy_heroes:textures/screens/amphibian_quirk_icon.png"), 9, 14, 0, 0, 16, 16, 16, 16);
+			}
+			if (AmphibianOverlayDisplayProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(new ResourceLocation("legacy_heroes:textures/screens/tongue_grapple_attack_icon.png"), 61, 12, 0, 0, 16, 16, 16, 16);
+			}
+			if (AmphibianOverlayDisplayProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(new ResourceLocation("legacy_heroes:textures/screens/sunlight_strength_attack_icon.png"), 86, 12, 0, 0, 16, 16, 16, 16);
 			}
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.legacy_heroes.quirk_overlay.label_100"), 186, 2, -13369600, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.legacy_heroes.quirk_overlay.label_empty"), 204, 2, -13369600, false);
