@@ -20,97 +20,81 @@ import net.maketendo.legacyheroes.procedures.AddZeroGravityQuirkProcedure;
 import net.maketendo.legacyheroes.procedures.AddInvisibilityQuirkProcedure;
 import net.maketendo.legacyheroes.procedures.AddHealingQuirkProcedure;
 import net.maketendo.legacyheroes.procedures.AddHardeningQuirkProcedure;
-import net.maketendo.legacyheroes.procedures.AddAmphibianQuirkProcedure;
 
 @Mod.EventBusSubscriber
 public class QuirksCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("quirk").requires(s -> s.hasPermission(3))
-				.then(Commands.literal("give").then(Commands.argument("player", EntityArgument.player()).then(Commands.literal("random")).then(Commands.literal("invisibility").executes(arguments -> {
-					Level world = arguments.getSource().getUnsidedLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
-					Entity entity = arguments.getSource().getEntity();
-					if (entity == null && world instanceof ServerLevel _servLevel)
-						entity = FakePlayerFactory.getMinecraft(_servLevel);
-					Direction direction = Direction.DOWN;
-					if (entity != null)
-						direction = entity.getDirection();
+		event.getDispatcher().register(Commands.literal("quirk").requires(s -> s.hasPermission(3)).then(Commands.literal("give").then(Commands.argument("player", EntityArgument.players()).then(Commands.literal("invisibility").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
 
-					AddInvisibilityQuirkProcedure.execute(arguments, entity);
-					return 0;
-				})).then(Commands.literal("hardening").executes(arguments -> {
-					Level world = arguments.getSource().getUnsidedLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
-					Entity entity = arguments.getSource().getEntity();
-					if (entity == null && world instanceof ServerLevel _servLevel)
-						entity = FakePlayerFactory.getMinecraft(_servLevel);
-					Direction direction = Direction.DOWN;
-					if (entity != null)
-						direction = entity.getDirection();
+			AddInvisibilityQuirkProcedure.execute(arguments, entity);
+			return 0;
+		})).then(Commands.literal("hardening").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
 
-					AddHardeningQuirkProcedure.execute(arguments, entity);
-					return 0;
-				})).then(Commands.literal("zerogravity").executes(arguments -> {
-					Level world = arguments.getSource().getUnsidedLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
-					Entity entity = arguments.getSource().getEntity();
-					if (entity == null && world instanceof ServerLevel _servLevel)
-						entity = FakePlayerFactory.getMinecraft(_servLevel);
-					Direction direction = Direction.DOWN;
-					if (entity != null)
-						direction = entity.getDirection();
+			AddHardeningQuirkProcedure.execute(arguments, entity);
+			return 0;
+		})).then(Commands.literal("zerogravity").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
 
-					AddZeroGravityQuirkProcedure.execute(arguments, entity);
-					return 0;
-				})).then(Commands.literal("healing").executes(arguments -> {
-					Level world = arguments.getSource().getUnsidedLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
-					Entity entity = arguments.getSource().getEntity();
-					if (entity == null && world instanceof ServerLevel _servLevel)
-						entity = FakePlayerFactory.getMinecraft(_servLevel);
-					Direction direction = Direction.DOWN;
-					if (entity != null)
-						direction = entity.getDirection();
+			AddZeroGravityQuirkProcedure.execute(arguments, entity);
+			return 0;
+		})).then(Commands.literal("healing").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
 
-					AddHealingQuirkProcedure.execute(arguments, entity);
-					return 0;
-				})).then(Commands.literal("explosion")).then(Commands.literal("stockpile")).then(Commands.literal("amphibian").executes(arguments -> {
-					Level world = arguments.getSource().getUnsidedLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
-					Entity entity = arguments.getSource().getEntity();
-					if (entity == null && world instanceof ServerLevel _servLevel)
-						entity = FakePlayerFactory.getMinecraft(_servLevel);
-					Direction direction = Direction.DOWN;
-					if (entity != null)
-						direction = entity.getDirection();
+			AddHealingQuirkProcedure.execute(arguments, entity);
+			return 0;
+		})))).then(Commands.literal("remove").then(Commands.argument("player", EntityArgument.players()).executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
 
-					AddAmphibianQuirkProcedure.execute(arguments, entity);
-					return 0;
-				})))).then(Commands.literal("remove").then(Commands.argument("player", EntityArgument.player()).executes(arguments -> {
-					Level world = arguments.getSource().getUnsidedLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
-					Entity entity = arguments.getSource().getEntity();
-					if (entity == null && world instanceof ServerLevel _servLevel)
-						entity = FakePlayerFactory.getMinecraft(_servLevel);
-					Direction direction = Direction.DOWN;
-					if (entity != null)
-						direction = entity.getDirection();
-
-					RemoveQuirkProcedure.execute(arguments, entity);
-					return 0;
-				}))));
+			RemoveQuirkProcedure.execute(arguments, entity);
+			return 0;
+		}))));
 	}
 }

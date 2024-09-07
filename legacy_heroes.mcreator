@@ -871,7 +871,7 @@
     {
       "name": "ZeroGravityMoveSets",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "zero_gravity_move_sets",
       "metadata": {
