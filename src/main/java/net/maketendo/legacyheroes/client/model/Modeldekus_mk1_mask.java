@@ -32,13 +32,13 @@ public class Modeldekus_mk1_mask<T extends Entity> extends EntityModel<T> {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 		PartDefinition bone = partdefinition.addOrReplaceChild("bone",
-				CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.5F)).texOffs(0, 23).addBox(-4.5F, -1.9F, -4.4F, 9.0F, 2.0F, 2.0F, new CubeDeformation(0.5F)).texOffs(14, 9)
-						.addBox(-4.1F, -7.15F, -2.8F, 0.0F, 7.0F, 7.0F, new CubeDeformation(0.5F)).texOffs(0, 9).addBox(4.1F, -7.15F, -2.8F, 0.0F, 7.0F, 7.0F, new CubeDeformation(0.5F)).texOffs(21, 22)
-						.addBox(-4.1F, -7.15F, 4.1995F, 8.2F, 7.0F, 0.0F, new CubeDeformation(0.5F)),
+				CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.75F)).texOffs(0, 23).addBox(-4.5F, -1.9F, -4.4F, 9.0F, 2.0F, 2.0F, new CubeDeformation(0.75F)).texOffs(14, 9)
+						.addBox(-4.1F, -7.15F, -2.8F, 0.0F, 7.0F, 7.0F, new CubeDeformation(0.75F)).texOffs(0, 9).addBox(4.1F, -7.15F, -2.8F, 0.0F, 7.0F, 7.0F, new CubeDeformation(0.75F)).texOffs(21, 22)
+						.addBox(-4.1F, -7.15F, 4.1995F, 8.2F, 7.0F, 0.0F, new CubeDeformation(0.75F)),
 				PartPose.offset(0.0F, 24.0F, 0.0F));
-		PartDefinition cube_r1 = bone.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(0, 0).addBox(-2.0F, -2.0F, 4.0F, 4.0F, 8.0F, 0.0F, new CubeDeformation(0.5F)),
+		PartDefinition cube_r1 = bone.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(0, 0).addBox(-2.0F, -2.0F, 4.0F, 4.0F, 8.0F, 0.0F, new CubeDeformation(0.75F)),
 				PartPose.offsetAndRotation(4.483F, -12.4609F, -4.0F, 0.0F, 0.0F, 0.3927F));
-		PartDefinition cube_r2 = bone.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(0, 0).mirror().addBox(-3.0F, -2.0F, 4.0F, 4.0F, 8.0F, 0.0F, new CubeDeformation(0.5F)).mirror(false),
+		PartDefinition cube_r2 = bone.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(0, 0).mirror().addBox(-3.0F, -2.0F, 4.0F, 4.0F, 8.0F, 0.0F, new CubeDeformation(0.75F)).mirror(false),
 				PartPose.offsetAndRotation(-3.483F, -12.4609F, -4.0F, 0.0F, 0.0F, -0.3927F));
 		return LayerDefinition.create(meshdefinition, 64, 64);
 	}
