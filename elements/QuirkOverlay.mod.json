@@ -181,38 +181,6 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "name": "label_100",
-          "text": {
-            "fixedValue": "100"
-          },
-          "color": {
-            "value": -13369600,
-            "falpha": 0.0
-          },
-          "anchorPoint": "TOP_LEFT",
-          "x": 186,
-          "y": 2
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_empty",
-          "text": {
-            "fixedValue": "%"
-          },
-          "color": {
-            "value": -13369600,
-            "falpha": 0.0
-          },
-          "anchorPoint": "TOP_LEFT",
-          "x": 204,
-          "y": 2
-        }
-      },
-      {
         "type": "image",
         "data": {
           "image": "quirk_display_background.png",
@@ -536,6 +504,65 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 86,
+          "y": 12
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "frog_jump_attack_icon.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AmphibianOverlayDisplay"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 36,
+          "y": 12
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "unavailable_power.png",
+          "use1Xscale": false,
+          "anchorPoint": "TOP_LEFT",
+          "x": 103,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lock_icon.png",
+          "use1Xscale": false,
+          "anchorPoint": "TOP_LEFT",
+          "x": 111,
+          "y": 12
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "unavailable_power.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AmphibianOverlayDisplay"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 53,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lock_icon.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AmphibianOverlayDisplay"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 61,
           "y": 12
         }
       }

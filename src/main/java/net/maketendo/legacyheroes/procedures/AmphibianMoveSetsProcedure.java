@@ -11,8 +11,8 @@ public class AmphibianMoveSetsProcedure {
 			return;
 		if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_attack_selection_rotor == 1) {
 			WarpRefractionProcedure.execute(world, x, y, z, entity);
-		} else if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_attack_selection_rotor == 2) {
-			PhantomTouchProcedure.execute(world, entity);
+		} else if ((entity.getCapability(LegacyHeroesModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new LegacyHeroesModVariables.PlayerVariables())).quirk_attack_selection_rotor == 3) {
+			SunlightStrengthProcedure.execute(world, x, y, z);
 		}
 	}
 }

@@ -12,7 +12,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.Minecraft;
 
@@ -176,8 +175,19 @@ public class QuirkOverlayOverlay {
 			if (AmphibianOverlayDisplayProcedure.execute(entity)) {
 				event.getGuiGraphics().blit(new ResourceLocation("legacy_heroes:textures/screens/sunlight_strength_attack_icon.png"), 86, 12, 0, 0, 16, 16, 16, 16);
 			}
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.legacy_heroes.quirk_overlay.label_100"), 186, 2, -13369600, false);
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.legacy_heroes.quirk_overlay.label_empty"), 204, 2, -13369600, false);
+			if (AmphibianOverlayDisplayProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(new ResourceLocation("legacy_heroes:textures/screens/frog_jump_attack_icon.png"), 36, 12, 0, 0, 16, 16, 16, 16);
+			}
+			event.getGuiGraphics().blit(new ResourceLocation("legacy_heroes:textures/screens/unavailable_power.png"), 103, 4, 0, 0, 32, 32, 32, 32);
+
+			event.getGuiGraphics().blit(new ResourceLocation("legacy_heroes:textures/screens/lock_icon.png"), 111, 12, 0, 0, 16, 16, 16, 16);
+
+			if (AmphibianOverlayDisplayProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(new ResourceLocation("legacy_heroes:textures/screens/unavailable_power.png"), 53, 4, 0, 0, 32, 32, 32, 32);
+			}
+			if (AmphibianOverlayDisplayProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(new ResourceLocation("legacy_heroes:textures/screens/lock_icon.png"), 61, 12, 0, 0, 16, 16, 16, 16);
+			}
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 					AttackNameDisplayProcedure.execute(entity), 3, 37, -1, false);
